@@ -1,14 +1,14 @@
 <?php 
-$hostnom = 'host=localhost';
-$usernom = 'MARISCHAEL';
+$hostnom = 'host=btssio.dedyn.io';
+$usernom = 'MARISCH';
 $password = '10112007';
-$bdd = 'bibliothèque';
+$bdd = 'MARISCHAEL_biblio';
 
 try {
     $monPdo = new PDO("mysql:$hostnom;dbname=$bdd;charset=utf8", $usernom, $password);
-    $monPdo->setAttribute(PDO::ATT_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $monPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOExeption $e) {
     echo $e->getMessage();
-    $monPDO = null;
+    $monPdo = null;
 }
 ?>
