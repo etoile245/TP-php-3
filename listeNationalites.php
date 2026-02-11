@@ -9,9 +9,10 @@ $lesNationalites=$req->fetchALL();
 
 <div class="container mt-5">
 
-  <div class="row-9"><h2>Liste des nationalités </h2>
-<div class="col-3"><a href="" class='btn btn-primary'><i class="fas fa-plus-circle"></i>Créer une nationalité</a></div>
-</div>
+  <div class="row pt-3">
+    <h2>Liste des nationalités </h2>
+    <div class="col-3"><a href="formAjoutNationalite.php" class='btn btn-primary'><i class="fas fa-plus-circle"></i>Créer une nationalité</a></div>
+  </div>
 
 <table class="table table-striped table-hover">
   <thead>
