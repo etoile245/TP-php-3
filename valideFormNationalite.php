@@ -1,9 +1,11 @@
 <?php 
 include "header.php";
 include "connexionPDO.php";
+$num=$_POST['num']; //récupération du numéro du formulaire hehehehehehehehehehehehe
 $libelle=$_POST['libelle']; //récupération du libellé du formulaire hehehehehehehehehehehehe
 
-$req=$monPdo->prepare("insert into nationalite(libelle) values(:libelle)");
+$req=$monPdo->prepare("update nationalite set libelle = :libelle where num = :num ");
+$req->bindParam(':num', $num);
 $req->bindParam(':libelle', $libelle);
 $nb=$req->execute();
 
@@ -12,11 +14,11 @@ echo '<div class="row">
     <div class="col mt-5">';
 if($nb == 1) {
     echo '<div class="alert alert-success" role="alert">
-    La nationalité a bien été ajoutée !
+    La nationalité a bien été modifiée !
     </div>';
 } else{
     echo '<div class="alert alert-danger" role="alert">
-    La nationalité n\'a pas été ajoutée !
+    La nationalité n\'a pas été modifiée !
     </div>';
 }
 ?>
