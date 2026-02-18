@@ -31,7 +31,7 @@ $lesNationalites=$req->fetchALL();
       echo "<td class='col-md-8'>$nationalite->libelle</th>";
       echo "<td class='col-md-2'>
         <a href='formNationalite.php?action=Modifier&num=$nationalite->num' class='btn btn-primary'><i class='fa-regular fa-pen-to-square'></i></a>
-        <a href='' class='btn btn-danger'><i class='fa-regular fa-trash-can'></i></a>
+        <a href='supprimerNationalite.php?num=$nationalite->num' class='btn btn-danger'><i class='fa-regular fa-trash-can'></i></a>
       </td>";
       echo "</tr>";
     }
