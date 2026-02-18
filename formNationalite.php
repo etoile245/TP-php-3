@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "header.php";
 $action=$_GET['action']; //soit Ajouter ou Modifier
 
@@ -15,7 +15,7 @@ if($action == "Modifier"){
 
 <div class="container mt-5">
     <h1 class="pt-3 text-center"><?php echo $action ; ?> une nationalite</h1>
-    <form action="valideModifNationalite.php" method="post" class="col-md-6 offset-md-3 border border-primary p-3 rounded">
+    <form action="valideFormNationalite.php?action=<?php echo $action ; ?>" method="post" class="col-md-6 offset-md-3 border border-primary p-3 rounded">
         <div class="form-group">
                 <label for='libelle'>Libellé</label>
             <input type="text" class='form-control' id='libelle' placeholder='Saisir le libellé' name='libelle' value="<?php if($action == "Modifier"){ echo $laNationalite->libelle ; } ?>">

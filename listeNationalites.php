@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "header.php";
 include "connexionPDO.php";
 $req=$monPdo->prepare("select * from nationalite");
