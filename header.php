@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Jumbotron Template · Bootstrap</title>
+    <title>Bibliothèque</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.2/examples/jumbotron/">
 
@@ -31,7 +31,7 @@
   <body>
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="index.php">Bibliothèque les étoiles</a>
+  <a class="navbar-brand" href="index.php">Bibliothèque</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
