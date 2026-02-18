@@ -6,26 +6,11 @@ $req=$monPdo->prepare("delete from nationalite where num = :num ");
 $req->bindParam(':num', $num);
 $nb=$req->execute();
 
-echo "<div class='container mt-5'>";
-echo '<div class="row">
-    <div class="col mt-5">';
 if($nb == 1) {
-    echo '<div class="alert alert-success" role="alert">
-    La nationalité a bien été supprimée !
-    </div>';
+    $_SESSION['message']=["success"=>"La nationalité a bien été supprimée !"];
 } else{
-    echo '<div class="alert alert-danger" role="alert">
-    Oups ! La nationalité n\'a pas été supprimée !
-    </div>';
+    $_SESSION['message']=["danger"=>"Oups ! La nationalité n'a pas été supprimée !"];
 }
-?>
-    </div>
-</div>
-<a href="listeNationalites.php" class="btn btn-primary"><i class="fa-solid fa-circle-left"></i>Revenir à la liste des nationalités</a>
-
-</div>
-
-
-<?php include "footer.php";
-
+header('location: listeNationalites.php');
+exit();
 ?>
