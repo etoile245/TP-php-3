@@ -17,7 +17,7 @@ if($action == "Modifier"){
     <h1 class="pt-3 text-center"><?php echo $action ; ?> une nationalite</h1>
     <form action="valideFormNationalite.php?action=<?php echo $action ; ?>" method="post" class="col-md-6 offset-md-3 border border-primary p-3 rounded">
         <div class="form-group">
-                <label for='libelle'>Libellé</label>
+                <label for='libelle'>Nationalité</label>
             <input type="text" class='form-control' id='libelle' placeholder='Saisir le libellé' name='libelle' value="<?php if($action == "Modifier"){ echo $laNationalite->libelle ; } ?>">
         </div>
         <input type="hidden" id="num" name="num" value="<?php if($action == "Modifier"){ echo $laNationalite->num ; } ?>">
